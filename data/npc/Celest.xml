@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<npc name="Celest" script="data/npc/scripts/marriagesystem.lua" walkinterval="50000" floorchange="0">
+<health now="1000" max="1000"/>
+<look type="130" head="0" body="10" legs="10" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_greet" value="Hello |PLAYERNAME|. You can {marriage} or may {divorce}."/>
+</parameters>
+</npc>

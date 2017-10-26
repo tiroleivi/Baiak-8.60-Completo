@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+
+<announce delay="0" type="warning" message="O grande boss king minotaur foi visto pelas redondezas, deve chegar em seu covil em instantes..." />
+<announce delay="10000" type="event" message="O king minotaur chegou! E está furioso, tome muito cuidado!" />
+
+<singlespawn delay="11000" name="king minotaur x="372" y="76" z="7" />
+
+
+
+</raid>

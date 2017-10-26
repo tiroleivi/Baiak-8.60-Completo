@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<npc name="Second Promotion" script="data/npc/scripts/promote2.lua" access="3" lookdir="2">
+<mana now="800" max="800"/>
+<health now="200" max="200"/>
+<look type="133" head="114" body="0" legs="0" feet="0" addons="3"/>
+</npc>

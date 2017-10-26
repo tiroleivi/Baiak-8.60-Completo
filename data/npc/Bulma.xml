@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<npc name="Bulma" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0"> 
+    <health now="100" max="100"/> 
+    <look type="139" head="113" body="57" legs="95" feet="113" addons="3"/> 
+    <parameters> 
+        <parameter key="module_shop" value="1"/> 
+        <parameter key="message_greet" value="Oi |PLAYERNAME|, Eu posso vender alguns items necessarios para seus addons, diga-me {trade} para ver o que eu posso lhe vender."/>
+        <parameter key="shop_buyable" value="white piece of cloth,5909,30000;green piece of cloth,5910,30000;red piece of cloth,5911,30000;blue piece of cloth,5912,30000;brown piece of cloth,5913,30000;yellow piece of cloth,5914,30000;lizard leather,5876,40000;green dragon leather,5877,40000;minotaur leather,5878,55000;giant spider silk,5879,50000;iron ore,5880,30000;lizard scale,5881,60000;red dragon scale,5882,60000;ape fur,5883,60000;chicken feather,5890,50000;perfect behemoth fang,5893,50000;bat wing,5894,60000;fish fin,5895,60000;bear paw,5896,40000;wolf paw,5897,40000;beholder eye,5898,60000;turtle shell,5899,50000;dwarven beard,5900,50000;honeycomb,5902,70000;vampire dust,5905,80000;demon dust,5906,160000;heaven blosson,5921,9000;holy orchid,5922,65000;behemoth claw,5930,60000;demonic essence,6500,70000;shard,7290,90000;hardened bone,5925,110000;blessed wooden stake,5942,150000;enchanted chicken wing,5891,150000;piece of royal stell,5887,550000;piece of draconian stell,5889,550000;piece of hell stell,5888,550000;ankh,2193,50000;huge chunk of crude iron,5892,1300000;elane's crossbow,5947,1200000;red dragon leather,5948,60000;fighting spirit,5884,2500000;warrior's sweat,5885,2750000;spool of yarn,5886,800000;energy soil,8303,2000000;ceiron's wolf tooth chain,5940,2500000;crown legs,2488,1500000;ring of the sky,2123,4250000;mermaid comb,5945,5000000;eye patch,6098,45000;peg leg,6126,30000;hook,6097,20000;deadeye devious' eye patch,6102,3000000;lethal lissy's shirt,6100,1800000;brutus bloodbeard's hat,6099,2000000;simon the beggar's favorite staff,6107,5000000;pirate voodoo doll,5810,450000;voodoo doll,2322,400000;"/> 
+    </parameters> 
+</npc> 

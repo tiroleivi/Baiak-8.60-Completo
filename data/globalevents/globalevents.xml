@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+	<globalevent name="save" interval="2600000" event="script" value="save.lua"/>
+	<globalevent name="clean" interval="4500000" event="script" value="clean.lua"/>
+    <globalevent name="texto" interval="2000" script="texto.lua" />
+    <globalevent name="texto2" interval="2000" script="texto2.lua" />
+	<globalevent name="serverstart" type="start" event="script" value="start.lua"/>
+	<globalevent name="playersrecord" type="record" event="script" value="record.lua"/>
+	<globalevent name="kingknight" interval="6000000" event="script" value="kingknight.lua"/>
+	<globalevent name="kingminotaur" interval="6000000" event="script" value="kingminotaur.lua"/>
+	<globalevent name="kingmagician" interval="6000000" event="script" value="kingmagician.lua"/>
+	<globalevent name="efeito" interval="2000" script="efeito.lua" />
+    <globalevent name="offtrain_add_minutes" interval="60000" event="script" value="offtrain_addMinutes.lua"/>
+	<globalevent name="shop" interval="30000" script="shop.lua"/>
+	<globalevent name="lottery" interval="10800000" event="script" value="lottery.lua"/>
+	
+	<!-- BF Evento -->
+	<globalevent name="GlobalBattle" interval="60000" event="script" value="BattleGlobalEvents.lua"/>
+	<globalevent name="GlobalStart" type="start" event="script" value="BattleGlobalStart.lua"/>
+	
+	<!-- CT Flag -->
+	<globalevent name="CTFCheck" time="19:33:00" event="script" value="CTFMax.lua"/>
+	
+	<!-- ZOMBIE event -->
+	<globalevent name="zombieevent" time="19:30" event="script" value="zombieevent.lua"/>
+	<globalevent name="zombieventt" time="19:32" event="script" value="fechazombie.lua"/>
+	
+	<!-- Shop Guild -->
+	<globalevent name="shopguild" interval="30000" event="script" value="shopguild.lua"/>
+	
+	<!-- <globalevent name="timer_example" time="21:35" event="script" value="my_script.lua"/> -->
+</globalevents>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Vip Donate" script="data/npc/scripts/sellervip.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="152" head="94" body="94" legs="94" feet="94" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="shiver vip arrow,7839,10000000;flaming vip arrow,7840,10000000;flash vip arrow,7838,10000000;earth vip arrow,7850,15000000"/>
+	</parameters>
+1</npc>

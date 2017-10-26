@@ -1,0 +1,7 @@
+<npc name="Task Man" script="data/npc/scripts/zezeniaa.lua" access="5" lookdir="1">
+<health now="1000" max="1000"/>
+<look type="131" head="114" body="95" legs="95" feet="0" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|.I've been wondering if you would never appear.. Are you interested in a {challenge} or you're just looking for your {reward}?" />
+	</parameters>
+</npc>

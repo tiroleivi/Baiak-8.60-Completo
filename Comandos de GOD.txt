@@ -1,0 +1,362 @@
+- /addskill
+O que é?: Comando para adicionar skills nos players.
+Como usar?: Basta adicionar o nome do player e o skill desejado no comando.
+Modelos: level/magic/fist/club/sword/axe/distance/shielding/fishing
+Exemplos:
+/addskill Level, Lord Paulistinha = +1 de Sword 
+/addskill Magic, Lord Paulistinha = +30 de Magic 
+
+- /attr
+O que é?: Bem, com este comando você pode fazer praticamente tudo, desde editar items, monstros até players, direto do seu GOD.
+Como usar?: Basta escrever o comando colocando o modelo e o valor, é preciso ficar na frente do item/monstro/player para editá-lo.
+
+Modelos:
+*Items
+set
+erase
+action/actionid/aid
+unique/uniqueid/uid
+destination/position/pos/destpos
+* Monstros
+health
+maxhealth
+mana
+maxmana
+basespeed
+droploot
+lossskill
+cannotmove
+skull
+speaktype
+* Players
+fyi
+tutorial
+guildrank
+guildnick
+group
+vocation
+sex
+stamina
+town
+balance
+marriage
+rates
+resetidle
+execute
+saving
+
+Exemplos:
+/attr set defense 35 = Adiciona +35 de defesa ao item.
+/attr set group 6 = Adiciona group6 ao player, ou seja, adiciona GOD ao player.
+
+- /serverdiag
+O que é?: Mostra informações do servidor, como nº de players, NPCs, Monstros e outras informações mais avançadas.
+Como usar?: Basta executar o comando /serverdiag
+
+- /closeserver
+O que é?: Comando que serve para fechar o servidor para players, sendo possivel a entrada apenas de GOD/GM/CM/Tutores.
+Como usar?: Basta executar o comando /closeserver
+
+- /openserver
+O que é?: Serve para abrir o servidor, quando ele tiver sido fechado com o comando anterior.
+Como usar?: Basta executar o comando /openserver
+
+- /promote
+- /demote
+O que é?: Promote acrescenta um nível de acesso à tal player, enquanto Demote diminui.
+Como usar?: Basta executar o comando /promote ou /demote seguido pelo nome do player.
+Exemplos:
+/promote Lord Paulistinha
+/demote Lord Paulistinha
+
+- /shutdown
+O que é?: Salva e fecha o servidor.
+Como usar?: Basta executar o comando /shutdown seguido de um dos modelos abaixo (opcional).
+Modelos: tempo/kill/stop
+Exemplos:
+/shutdown 5 = Salva e fecha o server depois de 5 minutos.
+/shutdown stop = Para a ação de fechar o server.
+/shutdown kill = Fecha o server sem salvar.
+
+- /mode
+O que é?: Muda o tipo de PVP.
+Como usar?: Basta executar o comando junto com um dos modelos abaixo.
+Modelos: nopvp/pvp/pvpenforced
+Exemplo:
+/mode pvpenforced
+
+- /info
+O que é?: Mostra informações detalhadas sobre determinado player.
+Como usar?: Basta executar o comando /info seguido do nome do player.
+Exemplo:
+/info Lord Paulistinha
+OBS: Só funciona com o player online.
+
+
+Community Manager's
+
+- /s
+O que é?: Sumona um Monstro.
+Como usar?: Basta executar o comando /s seguido do nome do monstro desejado.
+Exemplo:
+/s Dragon
+OBS: O monstro sumonado é comandado por você.
+
+
+- /n
+O que é?: Cria um NPC existente.
+Como usar?: Basta executar o comando /n seguido do nome do NPC desejado.
+Exemplo:
+/n Perac
+
+- /m
+O que é?: Cria um Monstro existente.
+Como usar?: Basta executar o comando /m seguido do nome do Monstro desejado
+Exemplos: 
+/m Dragon 
+/m Rat, Lord Paulistinha = Cria um rato na posição do player.
+
+- /reload
+O que é?: Recarrega scripts e valores.
+Como usar?: Basta executar o comando /reload seguido de um dos modelos descritos abaixo.
+Modelos: actions/channels/config/creatureevents/gameservers/globalevents/groups/highscores/
+houseprices/items/monsters/moveevents/npcs/outfits/quests/raids/spells/stages/talkactions/vocations/weapons/all Exemplos:
+/reload spells = Recarrega as spells 
+/reload all = Recarrega tudo.
+
+- /raid
+O que é?: Executa uma Raid
+Como usar?: Basta executar o comando /raid seguido do nome da raid existente.
+
+- /newtype
+O que é?: Você pode alternar entre todos os outfits disponíveis no servidor.
+Como usar?: Basta executar o comando /newtype seguido de um valor entre 2 e 351*
+* Este valor pode mudar a cada update, pois são adicionados novos outfits.
+
+- /r
+O que é?: Remove o tile ou criatura que estiver a sua frente.
+Como usar?: Basta executar o comando /r seguido de um dos modelos descritos abaixo, ou não.
+Modelos: valor/all
+Exemplos:
+/r = Deleta 1 tile a sua frente. 
+/r all = Deleta todos os tiles a sua frente. 
+/r 5 = Deleta 5 tiles a sua frente.
+
+- /owner 
+O que é?: Modifica o dono de alguma casa.
+Como usar?: Entre na casa e execute o comando /owner seguido do nome do player e/ou de um dos modelos descritos abaixo.
+Modelos: player/none
+Exemplos:
+/owner Lord Paulistinha, yes = Modifica o dono e limpa a casa.
+/owner Lord Paulistinha, no = Modifica o dono sem limpar a casa.
+/owner none = A casa fica sem dono
+
+- /storage
+O que é?: Mostra ou modifica o Storage de algum player.
+Como usar?: Basta executar o comando /storage seguido do nome do player e o StorageValue.
+Exemplos:
+/storage Lord Paulistinha, 20025 = Mostra valor da storage 20025
+/storage Lord Paulistinha, 20025,1 = Define valor para 1
+
+- /config
+O que é?: Mostra valores no Config.lua.
+Como usar?: Basta executar o comando /config seguido de um dos valores que existem no config.lua.
+Exemplos:
+/config ip
+/config mapAuthor
+/config whiteSkullTime
+OBS: Case Sensitive (Maiúsculas são Maiúsculas e minúsculas são minúsculas)
+
+- /i
+O que é?: Cria um item existente.
+Como usar?: Basta executar o comando /i seguido do nome ou ID do item.
+Exemplos:
+/i Golden Armor = 1 Golden Armor
+/i 2466 = 1 Golden Armor
+/i skull, 50 = 50 Skulls
+
+- /z
+O que é?: Mostra um Efeito Mágico.
+Como usar?: Basta digitar o comando /z seguido de um valor entre 0 e 68*.
+* A quantidade de efeitos pode mudar a cada update.
+
+- /x
+O que é?: Mostra um Efeito de Animação.
+Como usar?: Basta digitar o comando /x seguido de um valor entre 0 e 41*.
+* A quantidade de efeitos pode mudar a cada update.
+
+- /y
+O que é?: Mostra um texto animado em cores diferentes. Pode ser útil na definição de cores de alguns scripts.
+Como usar?: Basta digitar o comando /y seguido do código do número e/ou um texto.
+Exemplos:
+/y 50
+/y 50, Olá :]
+
+- /bc
+O que é?: Mensagem para todos, colorida.
+Como usar?: Basta digitar o comando /bc seguido pelo código da cor e o texto.
+Modelos: advance/event/white/orange/info/green/small/blue/red/warning/status
+Exemplos:
+/bc green Olá :]
+/bc green, Olá :]
+/bc Olá :]
+
+- /mkick
+O que é?: Desloga vários players
+Como usar?: Basta executar o comando mkick seguido pelo Range X e o Range Y
+Exemplo:
+/mkick 5,5 = Desloga todos os players em uma área 5x5 SQM.
+
+
+Gamemaster's
+
+- /ghost
+O que é?: Habilitar ou desabilitar invisibilidade para Players.
+Como usar?: Basta executar o comando /ghost para ativar ou executar novamente para desativar.
+
+- /squelch
+O que é?: Habilita ou desabilita o bloqueio de Mensagens Privadas.
+
+- /cliport
+O que é?: Você é teleportado para onde você clica.
+Como usar?: Basta executar o comando /cliport para ativar ou desativar.
+
+- /t
+O que é?: Teleporta para o templo.
+Como usar?: Basta executar o comando /t para teleportar você ou outro player para o templo.
+Exemplos:
+/t
+/t Lord Paulistinha
+
+- /c
+O que é?: Teleporta um Player ou Monstro para você.
+Como usar?: Basta executar o comando /c seguido pelo nome do player ou monstro desejado.
+Exemplos:
+/c Lord Paulistinha
+/c Demon
+
+- /goto
+O que é?: Teleporta você para um player/posição/lugar
+Exemplos:
+/goto 100, 40, 7 = Teleporta você para a posição no mapa.
+/goto Dragon
+/goto Lord Paulistinha
+
+- /a
+O que é?: Teleporta você a uma distância desejada.
+Exemplos:
+/a 5
+/a 5, Lord Paulistinha = Teleporta você a 5 SQMs do player.
+
+- /kick
+O que é?: Faz logout num player.
+Como usar?: Basta executar o comando /kick seguido pelo nome do player desejado.
+
+- /send
+O que é?: Manda um player/monstro para determinada posição.
+Exemplos:
+/send Lord Paulistinha; 100, 40, 7
+/send Lord Paulistinha, dragon
+
+- /unban
+O que é?: Desfaz o banimento de um determinado player ou account.
+Exemplo:
+/unban 123456
+/unban Lord Paulistinha
+
+- /town
+O que é?: Envia você ou algum player para a Cidade Natal.
+Exemplos:
+/town Carlin
+/town carlin, Lord Paulistinha
+
+- /up
+- /down
+O que é?: Sobe ou desce um ou vários andares no mapa.
+Como usar?: Use o comando /up para subir e o /down para descer.
+Exemplos:
+/up
+/up 3
+/down
+/down 3
+
+- /save
+O que é?: Salva o servidor.
+
+- /clean
+O que é?: Limpa o mapa.
+Exemplos:
+/clean = limpa o mapa imediatamente.
+/clean 5 = limpa o mapa em 5 minutos.
+/clean tile = limpa apenas o tile onde você está.
+
+- /reports
+O que é?: Mostra os reports feitos pelos players.
+Exemplos:
+/reports = Mostra todos os reports.
+/reports 30 = Mostra apenas o report de tal id.
+
+- /mc
+O que é?: Procura players ativos em um mesmo IP.
+Exemplos:
+/mc = Mostra todos os jogadores com mesmo IP.
+/mc 127.0.0.1 = Mostra apenas players com o IP 127.0.0.1.
+/mc Lord Paulistinha = Mostra todos os players com o mesmo ip de um player.
+
+
+Senior Tutor's
+
+
+- /wp
+O que é?: Mostra os Waypoints do mapa.
+
+- /notations
+O que é?: Mostra as Notations de certo player.
+Exemplo:
+/notations Lord Paulistinha
+
+- /gethouse
+O que é?: Mostra o nome da casa de certo player e/ou teleporta.
+Exemplos:
+/gethouse Lord Paulistinha = Mostra apenas o nome da casa.
+/gethouse Lord Paulistinha = Mostra o nome da casa e teleporta.
+
+- /b
+O que é?: Manda uma mensagem para todos do servidor.
+Exemplo:
+/b Olá :]
+
+
+Tutor's
+
+- /baninfo
+O que é?: Mostra uma informação detalhada sobre o banimento de certo player.
+Exemplo:
+/baninfo Lord Paulistinha
+
+- /pos
+O que é?: Mostra a posição do player que usa.
+
+Players
+
+- !frags
+O que é?: Mostra o número de frags do player e o tempo.
+
+- !online
+O que é?: Mostra uma lista de jogadores online.
+
+- !uptime
+O que é?: Mostra o tempo que o servidor está online.
+
+- !pvp
+O que é?: Mostra o World type.
+
+- !q
+O que é?: Mostra a quantidade de dinheiro que o player possiu no inventário.
+
+- !serverinfo
+O que é?: Mostra informações detalhadas sobre o servidor, como Exp Rate e Skill Rate, por exemplo.
+
+- /commands
+O que é?: Mostra todos os comandos que o player tem acesso.
+

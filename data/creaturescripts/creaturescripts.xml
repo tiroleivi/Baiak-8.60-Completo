@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+
+	<event type="joinchannel" name="GuildMotd" event="script" value="guildmotd.lua"/>
+	<event type="receivemail" name="Mail" event="script" value="mail.lua"/>
+	<event type="reportbug" name="SaveReportBug" script="reportbug.lua"/>
+    <event type="preparedeath" name="forever amulet" event="script" value="aol.lua"/>
+    <event type="death" name="tp" event="script" value="tp.lua"/>
+    <event type="death" name="teleportmonster" script="tpmonster.lua"/>
+
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
+	<event type="death" name="PlayerDeath" event="script" value="playerdeath.lua"/>
+	<event type="login" name="FirstItems" event="script" value="firstitems.lua"/>
+	<event type="statschange" name="dodge" event="script" value="dodge.lua"/>
+	<event type="kill" name="tasksystem" script="tasksystem.lua"/>
+	<event type="statschange" name="critical" event="script" value="critical.lua"/>
+
+	<event type="PrepareDeath" name="pvparena" script="pvparena.lua"/>
+	<event type="attack" name="attackguild" script="attackguild.lua"/>
+	<event type="death" name="incendio" script="incendioMonster.lua"/>
+    <event type="death" name="teleportmonster2" script="tpmonster2.lua"/>
+	<event type="login" name="CheckVip" script="endvip.lua"/>
+	<event type="death" name="SkullAmulet" event="script" value="preparedeath.lua"/>
+	
+	<!-- Trainer offline -->
+	<event type="login" name="offtrain_PlayerLogin" event="script" value="offtrain_login.lua"/>
+	<event type="logout" name="offtrain_PlayerLogout" event="script" value="offtrain_logout.lua"/>
+	
+	<!-- FimVip -->
+	<event type="login" name="FimVip" event="script" value="fimvip.lua"/>
+	
+	<!-- BF Evento -->
+	<event type="login" name="BattleLogin" event="script" value="BattleCreatureScript.lua"/>
+	<event type="PrepareDeath" name="BattleDeath" event="script" value="BattleCreatureScript.lua"/>
+	<event type="combat" name="BattleTeam" event="script" value="BattleCreatureScript.lua"/>
+	
+	<!-- CT Flag -->
+	<event type="logout" name="CTFLogout" event="script" value="CTFMax.lua"/>      
+	<event type="combat" name="CTFCombat" event="script" value="CTFMax.lua"/>      
+	<event type="attack" name="CTFAttack" event="script" value="CTFMax.lua"/>      
+	<event type="statschange" name="CTFDeath" event="script" value="CTFMax.lua"/> 
+	
+	<!-- Zombie Event -->
+	<event type="statschange" name="zombieevent" event="script" value="zombie event.lua"/>
+	
+        </creaturescripts>

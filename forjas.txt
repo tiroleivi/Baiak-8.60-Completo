@@ -1,0 +1,8 @@
+------- Forja System -------
+Forged Staff = AE + Staff Vip3
+Forged Sword = AE + Sword Vip3
+Forged Club = AE + Club Vip3
+Forged Axe = AE + Axe Vip3
+Forged Bow = AE + Bow Vip3
+
+AE= Aço Especial.

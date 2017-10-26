@@ -1,0 +1,16 @@
+~Bem Vindo ao Baiak Retro [8.60] ~ 
+
+~ Baiak Retro ~
+Novas Armas e Itens a venda nas areas VIPs e Donate,.
+Nova City: City Of Champions que pode ser considerada uma extenção da área vip1.
+Nova área Teleports.
+Os outifits Norseman (antes era necessário falar !addon norsewoman agora foi consertado) e Wayfarer arrumados pode ser feito com um addon doll !!
+Sistema de addons modificados agora é necessário comprar os items referente ao addon e trocar com o NPC
+Alguns addon são necessários quests para conseguir os items do addon. (os bosses estão localizador no andar 1 dos teleports free)
+O addon doll agora só é conseguido através da quest do acesso a VIP3.
+Bugs Removidos !!
+Novas Areas de eventos!: Dice Event; War Event; BP Event e Bugzin Event!.
+Adicionado um sistema de troféus para os ganhandores do War event com primeiro, segundo e terceiro lugar onde o nome do player aparece no troféu!
+
+By: Tiroleivi
+

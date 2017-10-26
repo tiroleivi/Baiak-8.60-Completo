@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Comerciante" script="data/npc/scripts/comerciante.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="132" head="0" body="124" legs="124" feet="94" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="pedra de refinamento,8306,50000000;stamina potion,7489,10000000;"/>
+	</parameters>
+1</npc>

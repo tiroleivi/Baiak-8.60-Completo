@@ -1,0 +1,9 @@
+<npc name="Dodge Critical Seller" script="data/npc/scripts/bookseller.lua" access="5" lookdir="1">
+<health now="1000" max="1000"/>
+<look type="75" head="76" body="75" legs="75" feet="76" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I've been waiting for you to come.. Say {trade} or {level}"/>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="dodge stone,12261,3000000;critical stone,12258,5000000;"/>
+	</parameters>
+</npc>

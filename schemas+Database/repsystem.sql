@@ -1,0 +1,1 @@
+ALTER TABLE `players` ADD `rep` INT NOT NULL DEFAULT 0;

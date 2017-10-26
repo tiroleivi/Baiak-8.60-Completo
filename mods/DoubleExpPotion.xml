@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="AdvancedExpPotionSystem" enabled="yes" author="MatheusMkalo" forum="XTibia.com">
+<!-- Configs and Functions -->
+<config name="PotionExpConfigs"><![CDATA[
+------ CONFIGURE SEU SCRIPT ------ TRUE ou FALSE
+configs = {
+time = 60, ---- TIME IN MINUTES
+needpa = TRUE,
+needlvl = {TRUE, level = 50},
+costmana = {TRUE, mana = 300},
+addrate = 50, -- Exp que vai adicionar em %
+removeonuse = TRUE
+}
+function getTime(s)
+    local n = math.floor(s / 60)
+    s = s - (60 * n)
+    return n, s
+end
+CreatureEventChecker = function(event, ...) -- Colex
+    if isCreature(arg[1]) then
+   event(unpack(arg))
+    end
+end
+creatureEvent = function(event, delay, ...) -- Colex
+    addEvent(CreatureEventChecker, delay, event, unpack(arg))
+end
+function getPlayerExtraExpRate(cid) -- By MatheusMkalo
+    return (getPlayerRates(cid)[8]-1)*100
+end
+]]></config>
+<!-- exppotion.lua -->
+<action itemid="12289" event="script"><![CDATA[
+domodlib('PotionExpConfigs')
+if getPlayerStorageValue(cid, 62164) >= 1 then
+    return doPlayerSendCancel(cid, "Voce ja ta Sob o Efeito da Potion.")
+end
+if configs.needpa and not isPremium(cid) then
+    return doPlayerSendCancel(cid, "Voce Precisar ser Premium Para Usar")
+end
+if configs.needlvl[1] and getPlayerLevel(cid) < configs.needlvl.level then
+    return doPlayerSendCancel(cid, "Voce Precisa ser " .. configs.needlvl.level .. " Para usar a Potion.")
+end
+if configs.costmana[1] then
+if getCreatureMana(cid) < configs.costmana.mana then
+    return doPlayerSendCancel(cid, "Voce Precisar ter " .. configs.costmana.mana .. " de Mana Para usar a Potion")
+else
+doCreatureAddMana(cid, -configs.costmana.mana)
+end
+end
+if configs.removeonuse then
+    doRemoveItem(item.uid, 1)
+end
+ 
+for i = configs.time*60, 1, -1 do
+local a = math.floor(i/60) .. ":" .. i - (60 * math.floor(i/60))
+if #a < 4 then
+a = string.sub(a,1,2) .. "0" .. string.sub(a, 3)
+end
+if i == configs.time*60 then
+creatureEvent(doPlayerSendCancel, configs.time*60*1000, cid, "Efeito Final da Pocao de EXP.")
+end
+creatureEvent(doPlayerSendCancel, (configs.time*60-i)*1000, cid, "O Efeito da Pocao vai acabar em "..a..".")
+end
+doPlayerSetExperienceRate(cid, (1+(configs.addrate/100))+(getPlayerExtraExpRate(cid)/100))
+creatureEvent(doPlayerSetExperienceRate, configs.time *60*1000, cid, 1+(getPlayerExtraExpRate(cid)/100-(configs.addrate/100)))
+doPlayerSendTextMessage(cid, 22, "Agora Voce Esta Recebendo mais EXP por Matar Monstros.")
+setPlayerStorageValue(cid, 62164, os.time())
+creatureEvent(setPlayerStorageValue, configs.time *60*1000, cid, 62164, 0)
+return TRUE
+]]></action>
+<creaturescript type="login" name="ExpPotion" event="script"><![CDATA[
+domodlib('PotionExpConfigs')
+local time = configs.time
+    if os.time()-getPlayerStorageValue(cid, 62164) < time *60 then
+  doPlayerSetExperienceRate(cid, (1+(configs.addrate/100))+(getPlayerExtraExpRate(cid)/100))
+  creatureEvent(doPlayerSetExperienceRate, (time*60-(os.time()-getPlayerStorageValue(cid, 62164))) * 1000, cid, 1+(getPlayerExtraExpRate(cid)/100-(configs.addrate/100)))
+  creatureEvent(setPlayerStorageValue, (time*60-(os.time()-getPlayerStorageValue(cid, 62164))) * 1000 , cid, 62164, 0)
+  for i = (time*60-(os.time()-getPlayerStorageValue(cid, 62164))), 1, -1 do
+  local a = math.floor(i/60) .. ":" .. i - (60 * math.floor(i/60))
+  if #a < 4 then
+  a = string.sub(a,1,2) .. "0" .. string.sub(a, 3)
+  end
+  if i == (time*60-(os.time()-getPlayerStorageValue(cid, 62164))) then
+  creatureEvent(doPlayerSendCancel, (time*60-(os.time()-getPlayerStorageValue(cid, 62164)))*1000, cid, "O Efeito da Potion Termina em.")
+  end
+  creatureEvent(doPlayerSendCancel, ((time*60-(os.time()-getPlayerStorageValue(cid, 62164)))-i)*1000, cid, "O Efeito da Potion Termina em "..a..".")
+  end
+    end
+return TRUE
+]]></creaturescript>
+</mod>
