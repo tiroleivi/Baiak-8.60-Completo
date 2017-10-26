@@ -124,7 +124,7 @@ pguid = getPlayerGUIDByName(getPartner(cid))
 if Ponline(pguid) then
 setPlayerStorageValue(getPlayerByNameWildcard(getPlayerNameByGUID(pguid)), 150420, -1)
 else
-db.executeQuery("DELETE FROM `player_storage` WHERE `player_id` = " .. pguid .. " AND `key` = 150420;")
+db.query("DELETE FROM `player_storage` WHERE `player_id` = " .. pguid .. " AND `key` = 150420;")
 end
 doDivorcePlayer(cid)
 else
